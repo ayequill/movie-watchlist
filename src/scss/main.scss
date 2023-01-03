@@ -1,0 +1,94 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container{
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+header{
+    background-image: url(/dist/assets/img/bg.jpg);
+    background-size: cover;
+    background-position-y: -5em;
+    // padding: 3em;
+    min-height: 15vh;
+    color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    nav{
+        display: grid;
+        align-items: center;
+    }
+    .nav-items{
+        display: flex;
+        justify-content: space-around;
+    }
+    .nav-items a{
+        all: unset;
+        font-weight: bold;
+    }
+    .search-bar{
+        position: absolute;
+        justify-self: center;
+        display: flex;
+        justify-content: center;
+        bottom: -1em;
+        // width: 80%;
+    }
+    .search-bar input{
+        position: relative;
+        border-top-left-radius: 0.5em;
+        border-bottom-left-radius: 0.5em;
+
+    }
+    .search-bar button{
+        border-top-right-radius: 0.5em;
+        border-bottom-right-radius: 0.5em;
+        
+    }
+}
+
+main{
+
+    .movie-card{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1em;
+        gap: 1em;
+
+    }
+    .card{
+        display: grid;
+        justify-items: center;
+        box-shadow: 2px 2px 10px 2px #dbd9d9;
+        border: none;
+        border-radius: 0.5em;
+        gap: 0.1em 0;
+    }
+    .title{
+        font-size: 0.8rem;
+        text-align: center;
+    }
+    .review{
+        font-size: 0.5rem;
+        margin-bottom: 0.5em;
+        color: #bbb2b2;
+
+    }
+    .card img{
+        width: 100%;
+    }
+    .icons{
+        justify-self: start;
+        padding: 0.3em 0 0 0.3em;
+    }
+}
+
