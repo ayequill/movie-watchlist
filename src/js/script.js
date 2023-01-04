@@ -14,7 +14,7 @@ async function renderMovies(url) {
 
     movies.map((movie)=>{
     
-    cardContainer.innerHTML += `<div class="card">
+    cardContainer.innerHTML += `<div class="card animate__animated animate__bounceInUp">
    <div class="icons">
      <i data-info="${movie.id}" class="bi bi-info-circle-fill"></i>
     <i class="bi bi-star"></i>
