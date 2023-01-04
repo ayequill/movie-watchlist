@@ -21,6 +21,7 @@ async function renderMovies(url) {
  </div>
  <img data-image="${movie.id}"src="https://image.tmdb.org/t/p/w500${movie.poster_path}"alt="">
  <p class="title">${movie.original_title}</p>
+ <p class="overview">Overview: ${movie.overview}</p>
  <p class="review">imdb Rating: ${movie.vote_average}</p>
  </div>`
    })
