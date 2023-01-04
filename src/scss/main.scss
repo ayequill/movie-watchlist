@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 body{
-    min-height: 100vw;
+    min-height: 100vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .container{
@@ -14,44 +14,46 @@ body{
     margin: 0 auto;
 }
 header{
-    background-image: url(/dist/assets/img/bg.jpg);
-    background-size: cover;
+    background-color: #353535;
     background-position-y: -5em;
-    // padding: 3em;
-    min-height: 15vh;
     color: white;
-    position: relative;
     display: flex;
     align-items: center;
     nav{
         display: grid;
         align-items: center;
+        grid-template-columns: repeat(1,1fr);
+
     }
     .nav-items{
         display: flex;
-        justify-content: space-around;
+        padding: 1em;
+        justify-content: center;
     }
     .nav-items a{
         all: unset;
         font-weight: bold;
     }
     .search-bar{
-        position: absolute;
+        padding: 0.5em;
         justify-self: center;
-        display: flex;
-        justify-content: center;
-        bottom: -1em;
-        // width: 80%;
     }
     .search-bar input{
-        position: relative;
+        all: unset;
+        padding: 0.3em 1em;
+        border: 1px solid gray;
         border-top-left-radius: 0.5em;
         border-bottom-left-radius: 0.5em;
 
     }
     .search-bar button{
+        all: unset;
+        background-color: #7fff00;
+        color: #353535;
+        padding: 0.3em 0.5em;
         border-top-right-radius: 0.5em;
         border-bottom-right-radius: 0.5em;
+        font-weight: bold;
         
     }
 }
@@ -61,7 +63,7 @@ main{
     .movie-card{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        padding: 1em;
+        padding: 0.5em;
         gap: 1em;
 
     }
@@ -89,6 +91,59 @@ main{
     .icons{
         justify-self: start;
         padding: 0.3em 0 0 0.3em;
+        font-size: 1.1rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
     }
+
 }
 
+.movie{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    background: linear-gradient(360deg, rgba(0,0,0,1) 50%, rgba(0,212,255,0) 100%);
+    color: invert($color: #000000);
+    gap: 1em 0;
+    font-size: 0.8rem;
+    // padding: 1em;
+    
+    .backdrop{
+        width: 100%;
+     
+    }
+    .movie-img-container{
+        position: relative;
+    }
+    .movie-img{
+        width: 25%;
+        position: absolute;
+        bottom: 1em;
+        right: 1em;
+        padding: 0.2em;
+        border-radius: 0.5em;
+        z-index: 1;
+        
+    }
+    .movie-title{
+        // position: absolute;
+        bottom: 20%;
+        color: invert($color: #000000);
+        font-weight: bold;
+        padding: 0.5em;
+        text-transform: uppercase;
+    }
+    .movie-overview{
+        padding: 0.5em;
+    }
+    .movie-release{
+        padding: 0.5em;
+    }
+    .movie-review{
+        padding: 0.5em;
+
+    }
+}
+.hidden{
+    display: none;
+}
