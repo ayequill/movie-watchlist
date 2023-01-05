@@ -21,24 +21,35 @@ header{
     color: white;
     display: flex;
     align-items: center;
+    margin-bottom: 1em;
     nav{
         display: grid;
         align-items: center;
-        grid-template-columns: repeat(1,1fr);
-
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas: 
+        'head head'
+        'lib search';
     }
     .nav-items{
         display: flex;
-        padding: 1em;
+        grid-area: head;
+        // padding: 1em;
         justify-content: center;
+    }
+    .nav-items h3{
+        padding: 0.5em;
+        text-shadow: 1px 1px 1px #6b6767;
     }
     .nav-items a{
         all: unset;
         font-weight: bold;
     }
     .search-bar{
-        padding: 0.5em;
+        display: none;
+        padding: 1em;
         justify-self: center;
+        grid-area: search;
+        grid-column: span 2;
     }
     .search-bar input{
         all: unset;
@@ -56,7 +67,25 @@ header{
         border-top-right-radius: 0.5em;
         border-bottom-right-radius: 0.5em;
         font-weight: bold;
-        
+        cursor: pointer;
+        text-shadow: 1px 1px 1px #a1cf72;
+    }
+    #search-icon{
+        // display: none;
+        color: #7fff00;
+        grid-area: search;
+        justify-self: end;
+        font-size: 1.5rem;
+        padding: 0.5em 1em;
+    }
+    .library{
+        padding: 0.5em 1em;
+        background-color: #7fff00;
+        justify-self: center;
+        color: #6b6767;
+        font-weight: bold;
+        border-radius: 0.5em;
+        font-size: 0.8rem;
     }
 }
 .overview{
@@ -105,6 +134,7 @@ main{
         // display: grid;
         grid-template-columns: repeat(3, 1fr);
         color: #6b6767;
+        cursor: pointer;
     }
 
 }
@@ -143,6 +173,7 @@ main{
             grid-area: img;
             border-top-left-radius: 0.5em;
             border-bottom-left-radius: 0.5em;
+            cursor: pointer;
         }
         .overview{
             display: block;
@@ -216,6 +247,11 @@ main{
     .movie-review{
         padding: 0.5em;
 
+    }
+    #backBtn{
+        font-size: 2rem;
+        color: #7fff00;
+        padding-inline-start: 0.4em;
     }
 }
 .hidden{
