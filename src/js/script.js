@@ -7,6 +7,11 @@ const searchUrl = 'https://api.themoviedb.org/3/search/movie?api_key=ba3d1895317
 
 let lib = []
 
+if(JSON.parse(localStorage.getItem('id'))){
+    lib = JSON.parse(localStorage.getItem('id'))
+}
+
+
 async function renderMovies(url) {
     const res = await fetch(url)
     const data = await res.json()
@@ -41,6 +46,7 @@ document.addEventListener('click', (e)=>{
         renderMovies(`https://api.themoviedb.org/3/search/movie?api_key=ba3d1895317548c2e4d01a7e948e60ae&language=en-US&query=${searchText.value}&page=1&include_adult=false`)
         document.querySelector('.search-bar').style.display = 'none'
         document.getElementById('search-icon').style.display = 'block'
+        document.getElementById('libBtn').style.display = 'block'
 
     }
     if (e.target.dataset.info){
@@ -70,9 +76,7 @@ document.addEventListener('click', (e)=>{
         cardContainer.innerHTML = ''
         cardContainer.classList.toggle('hidden')
         document.getElementById('libBtn').style.display = 'none'
-        if(JSON.parse(localStorage.getItem('id'))){
-            lib = JSON.parse(localStorage.getItem('id'))
-        }
+        
         lib.forEach((id)=> renderLibrary(id))
         console.log(JSON.parse(localStorage.getItem('id')));
     }
@@ -85,6 +89,7 @@ async function renderMini (id){
 
     cardContainer.innerHTML = ''
     cardContainer.classList.toggle('hidden')
+    document.getElementById('libBtn').style.display = 'block'
 
    document.querySelector('.movie').innerHTML = `
    <i id="backBtn" class="bi bi-backspace-fill"></i>
