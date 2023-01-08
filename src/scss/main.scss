@@ -43,7 +43,7 @@ header{
         justify-content: space-between;
     }
     .nav-items h3{
-        font-size: 1.5rem;
+        font-size: 1rem;
         text-shadow: 1px 1px 1px #6b6767;
         line-height: 1.2rem;
         letter-spacing: -0.02rem;
@@ -62,7 +62,7 @@ header{
         justify-self: center;
         grid-area: search;
         grid-column: span 2;
-        top: 18%;
+        top: 19%;
         position: absolute;
     }
     .search-bar input{
@@ -200,11 +200,24 @@ main{
 
 }
 // media queries
-@media (min-width: 768px){
+
+@media (min-width: 601px){
+.movie-card{
+            grid-template-columns: repeat(2,1fr);
+            gap: 2em;
+        }
+        .divider{
+            display: none;
+        }
+}
+@media (min-width: 900px){
     header{
         nav{
-            .search-bar{
-
+        .search-bar{
+        top: 19%;
+            }
+            .nav-items h3{
+                font-size: 2rem;
             }
         }
     }
