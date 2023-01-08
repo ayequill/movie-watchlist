@@ -5,47 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WatchMe</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="/dist/styles/main.css" />
-    <script
-      src="https://kit.fontawesome.com/3028a23e51.js"
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
       crossorigin="anonymous"
-    ></script>
-   
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <header>
       <div class="container">
         <nav>
           <div class="nav-items">
-            <h3>MovieHub <i class="bi bi-collection-play-fill"></i></h3>
-            <!-- <a href="#">My</a> -->
+            <h3>Find your film <i class="bi bi-collection-play-fill"></i></h3>
+            <a href="./collection.html"
+              ><p id="libBtn" class="library">
+                WATCHLIST <i class="bi bi-collection"></i></p
+            ></a>
           </div>
-          <p id="libBtn" class="library">LIBRARY <i class="bi bi-collection"></i></p>
           <div class="search-bar">
-            <input id="searchText" type="text" role="search" name="q" placeholder="Blade Runner" />
-            <!-- <i class="fa-brands fa-searchengin"></i> -->
+            <input
+              id="searchText"
+              type="text"
+              role="search"
+              name="q"
+              placeholder="Blade Runner"
+            />
             <button id="searchBtn">Search</button>
           </div>
-          <i id="search-icon" class="bi bi-search "></i>
         </nav>
       </div>
     </header>
     <main>
       <div class="container">
-        <div class="movie">
-         
-        </div>
-        <div class="movie-card">
-      
-        </div>
-       
+        <div class="movie"></div>
+        <div class="movie-card"></div>
       </div>
     </main>
-    <script src="/src/js/script.js"></script>
+    <script src="/src/js/script.js" type="module"></script>
   </body>
 </html>
