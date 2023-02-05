@@ -3,13 +3,13 @@
 ##### Used TheMovieDB (https://www.themoviedb.org/) API 
 
 ## Mobile Design
-<img src="./dist/assets/img/screen-home.png" width="200">
+<img src="./dist/assets/img/screen-home.webp" width="200">
 
-<img src="./dist/assets/img/screen-library.png" width="200">
+<img src="./dist/assets/img/screen-library.webp" width="200">
 
-<img src="./dist/assets/img/screen-single.png" width="200">
+<img src="./dist/assets/img/screen-single.webp" width="200">
 
 ## Desktop Design (1400px)
 
-<img src="./dist/assets/img/desktop-home.png" width="400">
-<img src="./dist/assets/img/desktop-library.png" width="400">
+<img src="./dist/assets/img/desktop-home.webp" width="400">
+<img src="./dist/assets/img/desktop-library.webp" width="400">
