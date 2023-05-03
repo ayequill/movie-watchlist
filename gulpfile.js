@@ -36,4 +36,4 @@ function watchTask() {
   // watch(["./src/scss/**/*.scss", "./src/js/**/*.js"], series(styles, scripts));
 }
 
-exports.default = series(styles, scripts, watchTask);
+exports.default = series(styles, scripts);
